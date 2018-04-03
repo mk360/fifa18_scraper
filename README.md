@@ -24,4 +24,4 @@ Each different player is just an entry in the huge generated `players` object, a
   * The work rates of the player (how willing to attack / defend the player is) ;
   * The position the player plays in.
 
-A sample of what the data would look like can be found [here](https://github.com/mk360/fifa18_scraper/sample.js).
+A sample of what the data would look like can be found [here](https://github.com/mk360/fifa18_scraper/blob/master/Sample.js).
