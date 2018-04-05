@@ -9,9 +9,9 @@ var pre = document.getElementById("log");
 var pageNumber = 1;
 
 var maxPage = {
-	gold: 1,
-	/*silver: 173,
-	bronze: 117*/
+	gold: 67,
+	silver: 173,
+	bronze: 117
 };
 
 pre.log = function(message, status) {
@@ -41,7 +41,6 @@ var scrapeNewPage;
 			document.getElementById("injected").innerHTML = queryContent;
 		})).then(() => {
 			let players = document.querySelectorAll(selector);
-			console.log(players.length);
 			createPlayerData(players);
 		}).catch((err) => {
 			console.error("Unable to scrape, aborting.");
@@ -116,8 +115,7 @@ function createPlayerData(data) {
 	if (maxPage[currentQuality] >= pageNumber) {
 		scrapeNewPage(pageNumber);
 	} else {
-		if (currentQuality === "gold") {
-			pre.log("Scraping Successful, " + Object.keys(players).length + " players saved", "success");
+		if (currentQuality === "bronze") {
 			write(players);
 			return;
 		} else {
@@ -157,6 +155,7 @@ function defaultAjaxRequest(url, callback) {
 }
 
 function write(object) {
+	pre.log("Scraping Successful, " + Object.keys(players).length + " players saved", "success");
 	scrapeNewPage = null;
 	let downloadLink = document.createElement("a");
 	downloadLink.href = "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(object));
