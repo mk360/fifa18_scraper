@@ -89,7 +89,6 @@ function createBasePlayerData($) {
 	let clubImages = map($(".player-info .player-club"), image => image.attribs["data-src"])
 	let nationImages = map($(".player-info .player-nation"), image => image.attribs["data-src"])
 	let strongFoot = map($(".player-stat.stream-col-100 .value"), spanFunction)
-	let workrates = map($(".player-stat.stream-col-160 .value"), spanFunction)
 	let separatedStars = chunk(map($(".player-stat.stream-col-90 .value"), spanFunction), 2)
 	let skillMoves = getStars(separatedStars, 1)
 	let weakFoot = getStars(separatedStars, 0)
@@ -100,6 +99,7 @@ function createBasePlayerData($) {
 function createIGData($) {
 	let overallSpans = $(".player-rating .revision-gradient")
 	let editions = map(overallSpans, overall => overall.attribs.class.split(" ").pop().toUpperCase())
+	let workrates = map($(".player-stat.stream-col-160 .value"), spanFunction)
 	let overalls = map(overallSpans, spanFunction)
 	let attributes = map($(".player-info"), span => {
 			return {
