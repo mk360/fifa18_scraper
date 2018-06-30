@@ -172,7 +172,7 @@ function assembleInGameData(elements, length) {
 	await fct(bronze)
 	console.log("All bronze players fetched. Mission successful.")
 	console.log("Thank you for bearing with us. Enjoy your file.")
-	fs.writeFileSync("players.js", beautify(JSON.stringify(players)))
+	fs.writeFileSync("players.js", "const players = " + beautify(JSON.stringify(players)))
 })(fetchAllPages)
 
 function futheadTrim(str) {
