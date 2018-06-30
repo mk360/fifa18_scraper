@@ -1,170 +1,237 @@
-var currentQuality = "gold";
+const req = require("cheerio-req")
+const fs = require("fs")
+const beautify = require("js-beautify")
 
-var players = {};
+let players = {}
 
-var selector = "li.list-group-item.list-group-table-row.player-group-item.dark-hover";
+function* setQualityRipper(quality, number = 1) {
+	let max = {
+		gold: 91,
+		silver: 184,
+		bronze: 119
+	}[quality]
 
-var pre = document.getElementById("log");
-
-var pageNumber = 1;
-
-var maxPage = {
-	gold: 67,
-	silver: 173,
-	bronze: 117
-};
-
-pre.log = function(message, status) {
-	let font = document.createElement("font");
-	switch (status) {
-		case "success": font.color = "green";
-		break;
-		case "failure": font.color = "red";
-		break;
-		default : "";
+	while (max >= number) {
+		yield "https://www.futhead.com/18/players/?level=" + quality +
+		"&bin_platform=ps&page=" + number;
+		number++
 	}
-	font.innerHTML = message;
-	font.family = "Monlo";
-	this.appendChild(font);
-	this.appendChild(document.createElement("br"));
-};
+}
 
-pre.log("Starting scraper...");
+let gold = setQualityRipper("gold")
+let silver = setQualityRipper("silver")
+let bronze = setQualityRipper("bronze")
 
-var scrapeNewPage;
+async function ripPage(htmlLink, cb) {
+	(async function fetchPage(link, cb) {
+		await req(link, cb)
+	})(htmlLink, cb)
+}
 
-(scrapeNewPage = function(pageNumber) {
-	if (maxPage[currentQuality] >= pageNumber) {
-		$.ajax(defaultAjaxRequest("http://www.futhead.com/18/players/?bin_platform=ps&page=" + pageNumber, function(data) {
-			let queryContent = data.contents.remove(data.contents.substring(0, data.contents.indexOf("</head>")));
-			delete document.body.style; // So we don't overuse CPU resources by rendering useless styles, especially when you're ripping 300+ pages
-			document.getElementById("injected").innerHTML = queryContent;
-		})).then(() => {
-			let players = document.querySelectorAll(selector);
-			createPlayerData(players);
-		}).catch((err) => {
-			console.error("Unable to scrape, aborting.");
-			return;
-		});
-	} else return;
-})(pageNumber);
+async function collectPage(link) {
+	return new Promise((resolve, reject) => {
+		ripPage(link, (err, $) => {
+			harvestPlayerData($)
+			resolve("whatever thing this is supposed to mean")
+		})
+	}).catch(err => {
+		throw err
+	})
+}
 
-function createPlayerData(data) {
-	data.forEach(function(member) {
-		let baseInfos = member.childNodes[1].childNodes[1];
-		let additionalInfos = baseInfos.childNodes[7].childNodes[1].childNodes;
-		let workRatesArr = additionalInfos[3].childNodes[0].textContent.split(" / ");
-		let workRates = {};
-		let strongFoot = getDeepContent(additionalInfos[5]);
-		let weakFoot = Number(getDeepContent(additionalInfos[7]));
-		let skillMoves = Number(getDeepContent(additionalInfos[9]));
-		workRates.offense = workRatesArr[0];
-		workRates.defense = workRatesArr[1];
-		let futheadLink = futheadify(baseInfos.href);
-		let ovr = Number(baseInfos.childNodes[1].childNodes[1].innerText); // A long chain, but browsers consider blank text as a child Node so it pushes the needed node to 2nd place
-		let name = baseInfos.childNodes[3].childNodes[7].innerText;
-		let position = baseInfos.childNodes[3].childNodes[9].childNodes[1].innerText; // Even longer chains XD
-		let playing = futheadTrim(baseInfos.childNodes[3].childNodes[9].childNodes[2].data);
-		let club = playing.split(" | ")[0];
-		let league = playing.split(" | ")[1];
-		let classList = baseInfos.childNodes[1].childNodes[1].classList;
-		let edition = classList[classList.length - 1].toUpperCase();
-		let statsSpan = baseInfos.childNodes[5];
-		if (edition !== "PRO" && name !== "Banner") {
-		// Second condition is to deny a troll from the site admins so yeah, we definitely won't record this
-			if (!players[name]) {
-				players[name] = [];
-			}
-			var stats = {
-				pace: Number(statsSpan.childNodes[1].innerText.remove(/[A-Z]+/)),
-				shooting: Number(statsSpan.childNodes[2].innerText.remove(/[A-Z]+/)), 
-				passing: Number(statsSpan.childNodes[3].innerText.remove(/[A-Z]+/)),
-				dribbling: Number(statsSpan.childNodes[4].innerText.remove(/[A-Z]+/)),
-				defending: Number(statsSpan.childNodes[5].innerText.remove(/[A-Z]+/)),
-				physical: Number(statsSpan.childNodes[6].innerText.remove(/[A-Z]+/))
-			};
-			var embeddedPlayerInfos = {
-				baseData: {
-					name: name,
-					club: club,
-					league: league,
-					url: futheadLink,
-					strongFoot: strongFoot,
-					weakFoot: weakFoot,
-					skillMoves: skillMoves
-				},
-				ig_data: { // in-game data
-					ovr: ovr,
-					edition: edition,
-					stats: stats,
-					workRates: workRates,
-					position: position
-				}
-			};
-			players[name].push(embeddedPlayerInfos);
-			if (players[name].length > 1) {
-				players[name].sort(function(firstEdition, secondEdition) {
-					return secondEdition.ig_data.ovr - firstEdition.ig_data.ovr;
-				});
-			}
+function harvestPlayerData($) {
+	let compoundData = createPlayerData($)
+	let builtObject = buildObject(compoundData)
+	addEntry(players, builtObject)
+	fs.writeFileSync("Sample.js", beautify(JSON.stringify(players)))
+	process.exit(1)
+}
+
+function sortPlayersByOverall(player1, player2) {
+	return player2.ig_data.ovr - player1.ig_data.ovr
+}
+
+function createPlayerData($) {
+	let baseData = createBasePlayerData($)
+	let ig_data = createIGData($)
+	return synthetize(baseData, ig_data)
+}
+
+function addEntry(targetObject, playerData) {
+	for (i in playerData) {
+		if (!(i in targetObject)) {
+			targetObject[i] = []
 		}
-	});
-	
-	pre.log("Scraping page " + pageNumber + " of " + maxPage[currentQuality] + ": SUCCESS", "success");
-	pageNumber++;
-	if (maxPage[currentQuality] >= pageNumber) {
-		scrapeNewPage(pageNumber);
-	} else {
-		if (currentQuality === "bronze") {
-			write(players);
-			return;
-		} else {
-			pre.log("Scraping all " + currentQuality + " players: SUCCESS", "success");
-			pre.log("Moving into next quality");
-			delete maxPage[currentQuality];
-			currentQuality = Object.keys(maxPage)[0];
-			pageNumber = 1;
-			scrapeNewPage(pageNumber);
+		targetObject[i] = targetObject[i].concat(playerData[i])
+		if (targetObject[i].length > 1) {
+			targetObject[i] = targetObject[i].sort(sortPlayersByOverall)
 		}
 	}
 }
 
-function futheadify(link) {
-	return link.replace("file://", "http://www.futhead.com");
-}
-
-function futheadTrim(string) {
-	return string.trim().replace(/[\n\s]+/mg, " ").replace("| ", "");
-}
-
-Object.defineProperty(String.prototype, "remove", {
-	writable: true,
-	enumerable: false,
-	value: function(str) {
-		return this.replace(str, "");
+async function fetchAllPages(generator) {
+	let link = generator.next().value
+	let i = 1 
+	while (link) {
+		await collectPage(link)
+		console.log("Ripping page " + i + ": success")
+		link = generator.next().value
+		i++
 	}
-});
-
-function defaultAjaxRequest(url, callback) {
-	return {
-		url: "http://whateverorigin.org/get?url=" + encodeURIComponent(url) + "&callback=?",
-		dataType: 'jsonp',
-		type: 'GET',
-		success: callback
-	};
+	console.log("Done.")
 }
 
-function write(object) {
-	pre.log("Scraping Successful, " + Object.keys(players).length + " players saved", "success");
-	scrapeNewPage = null;
-	let downloadLink = document.createElement("a");
-	downloadLink.href = "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(object));
-	downloadLink.download = "Sample.js";
-	downloadLink.innerHTML = "Download the players database";
-	document.body.prepend(downloadLink);
-	downloadLink.click();
+function createBasePlayerData($) {
+	let names = map($(".player-name"), spanFunction)
+	let positions = map($(".player-club-league-name strong"), spanFunction)
+	let leaguesAndClubs = map($(".player-club-league-name strong"), player => futheadTrim(player.next.data))
+	let playerImages = map($(".player-info .player-image"), image => image.attribs["data-src"])
+	let clubImages = map($(".player-info .player-club"), image => image.attribs["data-src"])
+	let nationImages = map($(".player-info .player-nation"), image => image.attribs["data-src"])
+	let strongFoot = map($(".player-stat.stream-col-100 .value"), spanFunction)
+	let workrates = map($(".player-stat.stream-col-160 .value"), spanFunction)
+	let separatedStars = chunk(map($(".player-stat.stream-col-90 .value"), spanFunction), 2)
+	let skillMoves = getStars(separatedStars, 1)
+	let weakFoot = getStars(separatedStars, 0)
+	return assembleBaseData([names, positions, leaguesAndClubs, [playerImages, clubImages, nationImages], [strongFoot, skillMoves, weakFoot]], names.length)
 }
 
-function getDeepContent(node) {
-	return node.childNodes[0].textContent;
+
+function createIGData($) {
+	let overallSpans = $(".player-rating .revision-gradient")
+	let editions = map(overallSpans, overall => overall.attribs.class.split(" ").pop().toUpperCase())
+	let overalls = map(overallSpans, spanFunction)
+	let attributes = map($(".player-info"), span => {
+			return {
+				pace: getPlayerAttributes(span, 1),
+				shooting: getPlayerAttributes(span, 2),
+				passing: getPlayerAttributes(span, 3),
+				dribbling: getPlayerAttributes(span, 4),
+				defense: getPlayerAttributes(span, 5),
+				physical: getPlayerAttributes(span, 6)
+			}
+		}
+	)
+	return assembleInGameData([editions, overalls, attributes, workrates, skillMoves, weakFoot], overalls.length)
+}
+
+function assembleBaseData(elements, length) {
+	let assemblerArray = []
+	for (i = 0; i < length; i++) {
+		let [club, league] = elements[2][i].split("|")
+		assemblerArray.push({
+			name: elements[0][i],
+			position: elements[1][i],
+			nation: +elements[3][2][i].split("/").pop().replace(".png", ""),
+			club,
+			league,
+			images: {
+				nation: elements[3][2][i],
+				club: elements[3][1][i],
+				player: elements[3][0][i]
+			},
+			strongFoot: elements[4][0][i],
+			skillMoves: +elements[4][1][i],
+			weakFoot: +elements[4][2][i],
+		})
+	}
+	return assemblerArray
+}
+
+function assembleInGameData(elements, length) {
+	let assemblerArray = []
+	for (i = 0; i < length; i++) {
+		let [offensiveWork, defensiveWork] = elements[3][i].split(" / ")
+		offensiveWork = offensiveWork[0]
+		defensiveWork = defensiveWork[0]
+		let obj = {
+			overall: elements[1][i],
+			edition: elements[0][i],
+			stats: elements[2][i],
+			workRates: {
+				offense: offensiveWork,
+				defense: defensiveWork
+			}
+		}
+		if (obj.edition !== "NIF" && !obj.edition.includes("WORLDCUP") && !obj.edition.includes("ICON")) {
+			obj.isSpecial = true
+		}
+		if (obj.edition.includes("WORLDCUP")) {
+			obj.isWorldCup = true
+		}
+		assemblerArray.push(obj)
+	}
+	return assemblerArray
+}
+
+(async function f(fct) {
+	await fct(gold)
+	console.log("All gold players incorporated. Moving to the silver quality.")
+	await fct(silver)
+	console.log("All silver players fetched. Moving to the bronze quality.")
+	await fct(bronze)
+	console.log("All bronze players fetched.")
+	console.log("Thank you for bearing with us. Enjoy your file.")
+	fs.writeFileSync("players.js", beautify(JSON.stringify(players)))
+})(fetchAllPages)
+
+function futheadTrim(str) {
+	return str.trim().replace(/[\n\s]{2,}/g, "").replace("|", "")
+}
+
+function map(...fct) {
+	return Array.prototype.map.call(...fct)
+}
+
+function getPlayerAttributes(span, index) {
+	return getAttributeValue(span, index)
+}
+
+function getAttributeValue(span, index) {
+	return +span.next.next.children[index].children[0].children[0].data
+}
+
+function spanFunction(span) {
+	return span.children[0].data
+}
+
+function chunk(array, size) {
+	let newArray = []
+	while (array.length >= size) {
+		let tinyArray = []
+		for (i = 0; i < size; i++) {
+			tinyArray.push(array.shift())
+		}
+		newArray.push(tinyArray)
+	}
+	if (array.length) newArray.push(array)
+	return newArray
+}
+
+function getStars(array, index) {
+	let arr = []
+	for (i = 0; i < array.length; i++) {
+		arr.push(array[i][index])
+	}
+	return arr
+}
+
+function synthetize(baseData, ig_data) {
+	let arr = []
+	for (i = 0; i < baseData.length; i++) {
+		arr.push({ baseData: baseData[i], ig_data: ig_data[i] })
+	}
+	return arr
+}
+
+function buildObject(objectToBe) {
+	let collectedPlayers = {}
+	for (i = 0; i < objectToBe.length; i++) {
+		let playerCopy = objectToBe[i]
+		if (!(playerCopy.baseData.name in collectedPlayers)) {
+			collectedPlayers[playerCopy.baseData.name] = []
+		}
+		collectedPlayers[playerCopy.baseData.name].push(playerCopy)
+	}
+	return collectedPlayers
 }

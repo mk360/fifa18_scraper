@@ -2,9 +2,15 @@
 
 ## Intro
 
-This program rips the full FIFA 18 Ultimate Team players database as registered in-game. Using jQuery's `ajax` method as repeatedly as necessary, it takes the content from the [Futhead](https://www.futhead.com) website and turns it into a (huge) file containing 99% of all you need to know about every single player in the game. Each player might come several times, as each time is a separate "edition" of the player, as EA might publish different editions of him i.e. when he performs very well during a certain game.
+This Node.js script rips every single player available at the time it runs. It takes all the needed informations from [FutHead.com](https://www.futhead.com) (kudos for the guys out there for not blocking my IP when doing my endless requests). Taking full profit of ES6 gadgets and toys (arrow functions, three dots operator, generator functions, a pinch of destructuring and _so many_ async/await Promises), it has evolved from a buggy and ugly web scraper into a dream data collector any FIFA fan could dream of.
 
-Remark: You might still find mistakes and inaccuracies (such as `null` values where they shouldn't be, for instance), but they concern players nobody knows about, and as such their profile wasn't complete enough to be included in the game's database.
+## Required Dependencies
+
+* [cheerio-req](https://www.npmjs.com/package/cheerio-req) : for the requests
+ _Fair Warning: One dependency `htmlparser2` needs further editing in order for the scraper to work properly._
+ _The module in its "working" version can be found in my fork of the project, until it makes its way to the official build._ 
+
+* [js-beautify](https://www.npmjs.com/package/cheerio-req) : to make the final product object _look like_ an object, not like an obfuscated pile of characters. No significant change required in this one.
 
 ## Included player details
 
@@ -13,10 +19,11 @@ Each different player is just an entry in the huge generated `players` object, a
   * Their name ;
   * What league they play in ;
   * What club they play in ;
-  * The URL to their Futhead info page ;
+  * The nation they play for, mapped by a numerical ID ;
+  * Images of the player, his nation, and his club: they're not base64-encoded, I just took the `data-src` property of these images ;
   * The foot they use best (their "strong foot") ;
   * How good are they when using their "wrong foot" (the opposite of their strong foot, basically) ;
-  * How good are they when they want to be fancy and use skill moves.
+  * How good are they when they want to use skill moves.
 * In-game info :
   * The overall rating of the player ;
   * The edition the player was published for (Team of the Year, Team of the Week, St. Patrick...) ;
