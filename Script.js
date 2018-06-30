@@ -43,8 +43,6 @@ function harvestPlayerData($) {
 	let compoundData = createPlayerData($)
 	let builtObject = buildObject(compoundData)
 	addEntry(players, builtObject)
-	fs.writeFileSync("Sample.js", beautify(JSON.stringify(players)))
-	process.exit(1)
 }
 
 function sortPlayersByOverall(player1, player2) {
@@ -73,7 +71,6 @@ async function fetchAllPages(generator) {
 	let link = generator.next().value
 	let i = 1 
 	while (link) {
-		console.log("test")
 		await collectPage(link)
 		console.log("Ripping page " + i + ": success")
 		link = generator.next().value
