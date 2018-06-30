@@ -73,6 +73,7 @@ async function fetchAllPages(generator) {
 	let link = generator.next().value
 	let i = 1 
 	while (link) {
+		console.log("test")
 		await collectPage(link)
 		console.log("Ripping page " + i + ": success")
 		link = generator.next().value
@@ -112,7 +113,7 @@ function createIGData($) {
 			}
 		}
 	)
-	return assembleInGameData([editions, overalls, attributes, workrates, skillMoves, weakFoot], overalls.length)
+	return assembleInGameData([editions, overalls, attributes, workrates], overalls.length)
 }
 
 function assembleBaseData(elements, length) {

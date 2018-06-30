@@ -10,7 +10,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/38.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151015745.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "99",
@@ -27,8 +30,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -42,7 +43,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/38.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p67129665.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "99",
@@ -59,8 +63,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -74,7 +76,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/38.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/20801.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "98",
@@ -91,8 +96,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -106,7 +109,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/38.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/20801.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -123,8 +129,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -138,7 +142,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/1000038.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/1000003.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_worldcup/20801.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -155,8 +162,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isWorldCup": true
         }
     }, {
@@ -170,7 +175,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/38.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p83906881.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -187,8 +195,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -203,7 +209,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/60.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/241.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/176580.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "98",
@@ -220,8 +229,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -235,7 +242,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/60.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/241.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151171524.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -252,8 +262,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -268,7 +276,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/1000054.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/112658.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/1237067.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "98",
@@ -285,8 +296,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 5,
-            "weakFoot": 4,
             "isWorldCup": true
         }
     }, {
@@ -300,7 +309,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/54.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/112658.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/237067.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "98",
@@ -316,9 +328,7 @@
             "workRates": {
                 "offense": "H",
                 "defense": "M"
-            },
-            "skillMoves": 5,
-            "weakFoot": 4
+            }
         }
     }],
     "Lionel Messi": [{
@@ -332,7 +342,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/241.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151152967.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "98",
@@ -349,8 +362,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -364,7 +375,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/241.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p117598535.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "98",
@@ -381,8 +395,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -396,7 +408,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/241.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/158023.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -413,8 +428,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }, {
@@ -428,7 +441,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/241.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/158023.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -445,8 +461,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -461,7 +475,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/111.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/9.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p268644787.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 2
         },
         "ig_data": {
             "overall": "98",
@@ -478,8 +495,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 2,
             "isSpecial": true
         }
     }, {
@@ -493,7 +508,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/111.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/9.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p251867571.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 2
         },
         "ig_data": {
             "overall": "98",
@@ -510,8 +528,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 2,
             "isSpecial": true
         }
     }],
@@ -526,7 +542,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/7.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/5.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/183277.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -543,8 +562,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -559,7 +576,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/54.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/73.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p167963031.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 5
         },
         "ig_data": {
             "overall": "97",
@@ -576,8 +596,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 5,
-            "weakFoot": 5,
             "isSpecial": true
         }
     }, {
@@ -591,7 +609,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/54.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/73.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151185815.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 5
         },
         "ig_data": {
             "overall": "97",
@@ -608,8 +629,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 5,
-            "weakFoot": 5,
             "isSpecial": true
         }
     }],
@@ -624,7 +643,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/45.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151162608.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -641,8 +663,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 3,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -657,7 +677,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/45.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p184760486.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "97",
@@ -674,8 +697,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -690,7 +711,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/1000052.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/112658.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_worldcup/190042.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 5,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "97",
@@ -707,8 +731,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 5,
-            "weakFoot": 3,
             "isWorldCup": true
         }
     }, {
@@ -722,7 +744,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/112658.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/190042.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 5,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "97",
@@ -738,9 +763,7 @@
             "workRates": {
                 "offense": "H",
                 "defense": "M"
-            },
-            "skillMoves": 5,
-            "weakFoot": 3
+            }
         }
     }],
     "Robert Lewandowski": [{
@@ -754,7 +777,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/37.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/21.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p134406273.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -771,8 +797,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 3,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -787,7 +811,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/52.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/10.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p184702455.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "97",
@@ -804,8 +831,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -820,7 +845,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/45.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p50487510.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "97",
@@ -837,8 +865,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 3,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -853,7 +879,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/60.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/240.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/182493.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 2,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "96",
@@ -870,8 +899,6 @@
                 "offense": "M",
                 "defense": "H"
             },
-            "skillMoves": 2,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -886,7 +913,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/45.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/197781.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "96",
@@ -903,8 +933,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }, {
@@ -918,7 +946,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/45.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p84083861.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "96",
@@ -935,8 +966,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }, {
@@ -950,7 +979,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/45.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/197781.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "95",
@@ -967,8 +999,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -983,7 +1013,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/46.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/697.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/41236.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -1000,8 +1033,6 @@
                 "offense": "M",
                 "defense": "L"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1016,7 +1047,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/60.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/73.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151174757.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "96",
@@ -1033,8 +1067,6 @@
                 "offense": "H",
                 "defense": "H"
             },
-            "skillMoves": 3,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -1049,7 +1081,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/7.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/48.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151170887.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -1066,8 +1101,6 @@
                 "offense": "H",
                 "defense": "L"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1082,7 +1115,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/27.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/46.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151187331.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -1099,8 +1135,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 3,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1115,7 +1149,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/21.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/22.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p100851646.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -1132,8 +1169,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1148,7 +1183,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/21.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p117623033.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 5
         },
         "ig_data": {
             "overall": "96",
@@ -1165,8 +1203,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 3,
-            "weakFoot": 5,
             "isSpecial": true
         }
     }],
@@ -1181,7 +1217,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/18.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/240.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p184744141.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "96",
@@ -1198,8 +1237,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -1214,7 +1251,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/7.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/10.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p151187929.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 5
         },
         "ig_data": {
             "overall": "96",
@@ -1231,8 +1271,6 @@
                 "offense": "H",
                 "defense": "H"
             },
-            "skillMoves": 4,
-            "weakFoot": 5,
             "isSpecial": true
         }
     }, {
@@ -1246,7 +1284,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/7.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/10.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p100856281.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 5
         },
         "ig_data": {
             "overall": "96",
@@ -1263,8 +1304,6 @@
                 "offense": "H",
                 "defense": "H"
             },
-            "skillMoves": 4,
-            "weakFoot": 5,
             "isSpecial": true
         }
     }],
@@ -1279,7 +1318,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/27.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/47.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p67293208.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 2,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "96",
@@ -1296,8 +1338,6 @@
                 "offense": "L",
                 "defense": "H"
             },
-            "skillMoves": 2,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -1312,7 +1352,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/10.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/243.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p50508651.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -1329,8 +1372,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1345,7 +1386,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/14.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/18.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p184751502.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "96",
@@ -1362,8 +1406,6 @@
                 "offense": "H",
                 "defense": "H"
             },
-            "skillMoves": 3,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1378,7 +1420,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/54.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/112658.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/37576.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 5,
+            "weakFoot": 5
         },
         "ig_data": {
             "overall": "96",
@@ -1394,9 +1439,7 @@
             "workRates": {
                 "offense": "M",
                 "defense": "M"
-            },
-            "skillMoves": 5,
-            "weakFoot": 5
+            }
         }
     }],
     "Thiago Silva": [{
@@ -1410,7 +1453,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/54.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/73.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/164240.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 3,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "95",
@@ -1427,8 +1473,6 @@
                 "offense": "H",
                 "defense": "H"
             },
-            "skillMoves": 3,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -1443,7 +1487,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/56.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/21.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/198710.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "95",
@@ -1460,8 +1507,6 @@
                 "offense": "M",
                 "defense": "L"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }],
@@ -1476,7 +1521,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/7.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/11.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players/192505.png"
-            }
+            },
+            "strongFoot": "Left",
+            "skillMoves": 3,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "95",
@@ -1493,8 +1541,6 @@
                 "offense": "M",
                 "defense": "M"
             },
-            "skillMoves": 3,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1509,7 +1555,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/51.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/46.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p218327656.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 4
         },
         "ig_data": {
             "overall": "95",
@@ -1526,8 +1575,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 4,
             "isSpecial": true
         }
     }],
@@ -1542,7 +1589,10 @@
                 "nation": "https://futhead.cursecdn.com/static/img/18/nations/27.png",
                 "club": "https://futhead.cursecdn.com/static/img/18/clubs/48.png",
                 "player": "https://futhead.cursecdn.com/static/img/18/players_alt/p117638731.png"
-            }
+            },
+            "strongFoot": "Right",
+            "skillMoves": 4,
+            "weakFoot": 3
         },
         "ig_data": {
             "overall": "95",
@@ -1559,8 +1609,6 @@
                 "offense": "H",
                 "defense": "M"
             },
-            "skillMoves": 4,
-            "weakFoot": 3,
             "isSpecial": true
         }
     }]
