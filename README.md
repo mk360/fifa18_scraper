@@ -6,8 +6,10 @@ This Node.js script rips every single player available at the time it runs. It t
 
 ## Required Dependencies
 
-* [cheerio-req](https://www.npmjs.com/package/cheerio-req) : for the requests
+* [cheerio-req](https://www.npmjs.com/package/cheerio-req) : for the requests. And the mini-jQuery.
+
  _Fair Warning: One dependency `htmlparser2` needs further editing in order for the scraper to work properly._
+
  _The module in its "working" version can be found in my fork of the project, until it makes its way to the official build._ 
 
 * [js-beautify](https://www.npmjs.com/package/cheerio-req) : to make the final product object _look like_ an object, not like an obfuscated pile of characters. No significant change required in this one.
