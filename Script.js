@@ -166,11 +166,11 @@ function assembleInGameData(elements, length) {
 
 (async function f(fct) {
 	await fct(gold)
-	console.log("All gold players incorporated. Moving to the silver quality.")
+	console.log("All gold players fetched. Moving to the silver quality.")
 	await fct(silver)
 	console.log("All silver players fetched. Moving to the bronze quality.")
 	await fct(bronze)
-	console.log("All bronze players fetched.")
+	console.log("All bronze players fetched. Mission successful.")
 	console.log("Thank you for bearing with us. Enjoy your file.")
 	fs.writeFileSync("players.js", beautify(JSON.stringify(players)))
 })(fetchAllPages)

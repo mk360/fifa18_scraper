@@ -26,12 +26,12 @@ Each different player is just an entry in the huge generated `players` object, a
   * The foot they use best (their "strong foot") ;
   * How good are they when using their "wrong foot" (the opposite of their strong foot, basically) ;
   * How good are they when they want to use skill moves.
+  * The position the player plays in.
 * In-game info :
   * The overall rating of the player ;
   * The edition the player was published for (Team of the Year, Team of the Week, St. Patrick...) ;
   * The main stats of the player. It is itself an object containing numerical values related to his ability in different domains ;
   * The work rates of the player (how willing to attack / defend the player is) ;
-  * The position the player plays in.
 
 ## Output
 
