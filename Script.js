@@ -35,7 +35,10 @@ async function collectPage(link) {
 			resolve("whatever thing this is supposed to mean")
 		})
 	}).catch(err => {
-		throw err
+		console.log(err)
+		console.log("We're sorry, but an error happened and we couldn't keep working.")
+		console.log("Don't worry, we got your back covered.")
+		writePlayersToFile(true)
 	})
 }
 
@@ -163,14 +166,14 @@ function assembleInGameData(elements, length) {
 }
 
 (async function f(fct) {
+	console.log("Starting scraper. Ripping gold players.")
 	await fct(gold)
 	console.log("All gold players fetched. Moving to the silver quality.")
 	await fct(silver)
 	console.log("All silver players fetched. Moving to the bronze quality.")
 	await fct(bronze)
 	console.log("All bronze players fetched. Mission successful.")
-	console.log("Thank you for bearing with us. Enjoy your file.")
-	fs.writeFileSync("players.js", "const players = " + beautify(JSON.stringify(players)))
+	writePlayersToFile()
 })(fetchAllPages)
 
 function futheadTrim(str) {
@@ -232,4 +235,17 @@ function buildObject(objectToBe) {
 		collectedPlayers[playerCopy.baseData.name].push(playerCopy)
 	}
 	return collectedPlayers
+}
+
+function writePlayersToFile(onerr) {
+	let beautified = beautify(JSON.stringify(players))
+	console.log("The data you've scraped is currently being written into a file.")
+	console.log("The process might take some time, so please prepare some tea and enjoy it in the meanwhile.")
+	fs.writeFile("players.js", function() {
+		console.log("Your \"players.js\" file is now ready.")
+		console.log("If you liked the output, please star my repo on GitHub!")
+		if (onerr) {
+			console.log("And sorry for what happend. :X")
+		}
+	})
 }
