@@ -241,7 +241,7 @@ function writePlayersToFile(onerr) {
 	let beautified = beautify(JSON.stringify(players))
 	console.log("The data you've scraped is currently being written into a file.")
 	console.log("The process might take some time, so please prepare some tea and enjoy it in the meanwhile.")
-	fs.writeFile("players.js", function() {
+	fs.writeFile("players.js", "const players = " + beautified, function() {
 		console.log("Your \"players.js\" file is now ready.")
 		console.log("If you liked the output, please star my repo on GitHub!")
 		if (onerr) {
