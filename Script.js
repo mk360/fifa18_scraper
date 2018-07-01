@@ -46,7 +46,7 @@ function harvestPlayerData($) {
 }
 
 function sortPlayersByOverall(player1, player2) {
-	return player2.ig_data.ovr - player1.ig_data.ovr
+	return player2.ig_data.overall - player1.ig_data.overall
 }
 
 function createPlayerData($) {
