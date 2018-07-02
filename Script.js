@@ -1,6 +1,5 @@
 const req = require("cheerio-req")
 const fs = require("fs")
-const beautify = require("js-beautify")
 
 let players = {}
 
@@ -238,14 +237,14 @@ function buildObject(objectToBe) {
 }
 
 function writePlayersToFile(onerr) {
-	let beautified = beautify(JSON.stringify(players))
+	let stringified = JSON.stringify(players)
 	console.log("The data you've scraped is currently being written into a file.")
-	console.log("The process might take some time, so please prepare some tea and enjoy it in the meanwhile.")
-	fs.writeFile("players.js", "const players = " + beautified, function() {
+	fs.writeFile("players.js", "const players = " + stringified, function() {
 		console.log("Your \"players.js\" file is now ready.")
-		console.log("If you liked the output, please star my repo on GitHub!")
 		if (onerr) {
 			console.log("And sorry for what happend. :X")
+		} else {
+			console.log("If you liked the output, please star my repo on GitHub!")
 		}
 	})
 }

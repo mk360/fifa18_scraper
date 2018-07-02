@@ -12,7 +12,7 @@ This Node.js script rips every single player available at the time it runs. It t
 
  _The module in its "working" version can be found in my fork of the project, until it makes its way to the official build._ 
 
-* [js-beautify](https://www.npmjs.com/package/cheerio-req) : to make the final product object _look like_ an object, not like an obfuscated pile of characters. No significant change required in this one.
+* [js-beautify](https://www.npmjs.com/package/cheerio-req) _(deprecated, install and use at your own risk)_ : to make the final product object _look like_ an object, not like an obfuscated pile of characters. No significant change required in this one.
 
 ## Included player details
 
@@ -37,4 +37,4 @@ Each different player is just an entry in the huge generated `players` object, a
 
 The result of years of waiting for the scraper to be done will appear as a "players.js" file. But if there's a fact you should be wary about, it is that it will produce it at the directory where you run the script, so be careful.
 
-A sample of what the data would look like can be found [here](https://github.com/mk360/fifa18_scraper/blob/master/Sample.js).
+A beautified sample of what the data would look like can be found [here](https://github.com/mk360/fifa18_scraper/blob/master/Sample.js).
