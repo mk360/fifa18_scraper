@@ -32,6 +32,7 @@ Each different player is just an entry in the huge generated `players` object, a
   * The edition the player was published for (Team of the Year, Team of the Week, St. Patrick...) ;
   * The main stats of the player. It is itself an object containing numerical values related to his ability in different domains ;
   * The work rates of the player (how willing to attack / defend the player is) ;
+  * The _card quality_ of the player (whether he's a gold, silver or bronze player).
 
 ## Output
 

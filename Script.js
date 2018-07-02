@@ -132,7 +132,7 @@ function assembleBaseData(elements, length) {
 			},
 			strongFoot: elements[4][0][i],
 			skillMoves: +elements[4][1][i],
-			weakFoot: +elements[4][2][i],
+			weakFoot: +elements[4][2][i]
 		})
 	}
 	return assemblerArray
@@ -145,13 +145,14 @@ function assembleInGameData(elements, length) {
 		offensiveWork = offensiveWork[0]
 		defensiveWork = defensiveWork[0]
 		let obj = {
-			overall: elements[1][i],
+			overall: +elements[1][i],
 			edition: elements[0][i],
 			stats: elements[2][i],
 			workRates: {
 				offense: offensiveWork,
 				defense: defensiveWork
-			}
+			},
+			quality: elements[1][i] >= 75 ? "gold" : elements[1][i] >= 65 ? "silver" : "bronze"
 		}
 		if (obj.edition !== "NIF" && !obj.edition.includes("WORLDCUP") && !obj.edition.includes("ICON")) {
 			obj.isSpecial = true
