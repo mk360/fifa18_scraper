@@ -10,7 +10,7 @@ This Node.js script rips every single player available at the time it runs. It t
 
  _Fair Warning: One dependency `htmlparser2` needs further editing in order for the scraper to work properly._
 
- _The module in its "working" version can be found in my fork of the project, until it makes its way to the official build._ 
+ _The module in its "working" version can be found in the "strong" branch of my project's fork, until it makes its way to the official build._ 
 
 * [js-beautify](https://www.npmjs.com/package/cheerio-req) _(deprecated, install and use at your own risk)_ : to make the final product object _look like_ an object, not like an obfuscated pile of characters. No significant change required in this one.
 
