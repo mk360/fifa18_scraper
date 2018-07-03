@@ -140,6 +140,7 @@ function assembleBaseData(elements, length) {
 
 function assembleInGameData(elements, length) {
 	let assemblerArray = []
+	if (elements[0][i] === "TRANSFER") elements[0][i] = "NIF"
 	for (i = 0; i < length; i++) {
 		let [offensiveWork, defensiveWork] = elements[3][i].split(" / ")
 		offensiveWork = offensiveWork[0]
