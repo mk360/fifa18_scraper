@@ -5,9 +5,9 @@ let players = {}
 
 function* setQualityRipper(quality, number = 1) {
 	let max = {
-		gold: 91,
-		silver: 184,
-		bronze: 119
+		gold: 103,
+		silver: 205,
+		bronze: 123
 	}[quality]
 
 	while (max >= number) {
